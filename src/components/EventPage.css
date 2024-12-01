@@ -1,0 +1,262 @@
+.page-container {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.event-page {
+  width: 100%;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ff4e00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  z-index: 10;
+}
+.event-type {
+  padding: 0;          
+  background: none;    
+  box-shadow: none;    
+  border-radius: 0;    
+  margin-bottom: 20px;}
+
+.event-hero {
+  position: relative;
+  min-height: 500px;
+  max-width: 80%;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.event-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));*/
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 60%;
+  
+}
+
+.event-hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.event-hero h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  max-width: 80%;
+}
+
+.view-map-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.booking-card {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  color: #333;
+}
+
+.booking-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.add-to-calendar {
+  color: #ff4e00;
+  cursor: pointer;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.book-now {
+  width: 100%;
+  padding: 10px;
+  background: #ff4e00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+.promoter-box {
+  background: #f5f5f5;
+  padding: 8px;
+  text-align: center;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.no-refunds {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}
+
+.event-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.content-left,
+.content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.time-highlight {
+  color: #ff4e00;
+  font-weight: 500;
+}
+
+.link-highlight {
+  color: #ff4e00;
+  text-decoration: none;
+}
+
+.map {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+.location h4 {
+  font-size: 16px;
+  margin: 12px 0 8px;
+}
+
+.location-note {
+  color: #666;
+  font-size: 14px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+}
+.social-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.social-btn img {
+  width: 20px;    /* Adjust based on your icon size */
+  height: 20px;   /* Adjust based on your icon size */
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .event-hero {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 300px;
+    padding: 60px 20px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .booking-card {
+    width: 100%;
+  }
+
+  .event-content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 30px;
+  }
+}

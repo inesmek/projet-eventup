@@ -1,0 +1,260 @@
+/* Container layout */
+.signup-container {
+    display: flex;
+    height: 100vh;
+    
+}
+
+/* Left side styling */
+.signup-left {
+    flex: 3.5;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+        url("../Assets/signup.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.signup-left h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.signup-left p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.signin-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Right side form styling */
+.signup-right {
+    flex: 6.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header .logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form styling */
+.signup-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    text-align: left;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px; 
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff; 
+    outline: none;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-group label:hover input[type="radio"] {
+    border-color: #E14817;
+}
+
+.radio-group label:hover {
+    color: #333;
+}
+
+.radio-group input[type="radio"]:checked {
+    border-color: #E14817;
+    border-width: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .radio-group {
+        gap: 20px;
+    }
+    
+    .radio-group label {
+        font-size: 14px;
+    }
+    
+    .radio-group input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        border-width: 2px;
+    }
+    
+    .radio-group input[type="radio"]:checked {
+        border-width: 5px;
+    }
+}
+
+/* Button */
+.sign-up-button {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #E14817;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* Responsive styling for screens 1024px and below */
+@media (max-width: 1024px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-left {
+        width: 100%;
+        padding: 20px;
+        height: 50vh;
+    }
+
+    .signup-right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .signup-form {
+        max-width: 90%;
+    }
+
+    .sign-up-button {
+        width: 80%;
+    }
+}
+
+/* Responsive styling for screens 768px and below */
+@media (max-width: 768px) {
+    .signup-left h2 {
+        font-size: 28px;
+    }
+
+    .signup-left p {
+        font-size: 12px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .signup-right {
+        padding: 10px;
+    }
+
+    .sign-up-button {
+        width: 100%;
+    }
+}
+
+/* Responsive styling for screens 480px and below */
+@media (max-width: 480px) {
+    .signup-left {
+        height: 40vh;
+    }
+
+    .signup-left h2 {
+        font-size: 20px;
+    }
+
+    .signup-left p {
+        font-size: 10px;
+    }
+
+    .signup-form {
+        padding: 0 10px;
+    }
+
+    .header .logo {
+        width: 120px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .or-divider {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+}

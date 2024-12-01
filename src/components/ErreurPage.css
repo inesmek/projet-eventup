@@ -1,0 +1,154 @@
+.erreur-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F8F8FA;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.sign {
+    display: flex;
+    gap: 20px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    color: #E14817;
+    border: 1px solid #E14817;
+}
+
+.signup-btn {
+    background-color: #E14817;
+    color: white;
+    border: 1px solid #E14817;
+}
+
+.login-btn:hover {
+    background-color: #fff5f2;
+}
+
+.signup-btn:hover {
+    background-color: #c13d13;
+}
+
+.error-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.error-image {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.error-image img {
+    width: 100%;
+    height: auto;
+}
+
+.error-text {
+    margin-bottom: 40px;
+}
+
+.error-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.error-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #E14817;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #c13d13;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #E14817;
+}
+
+@media (max-width: 768px) {
+    .head {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .error-image {
+        max-width: 300px;
+    }
+
+    .error-text h1 {
+        font-size: 2rem;
+    }
+
+    .error-text p {
+        font-size: 1rem;
+    }
+
+    .login-btn, .signup-btn {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+}

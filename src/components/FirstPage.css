@@ -1,0 +1,212 @@
+.first-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(225, 73, 23, 0.32),
+    rgba(193, 60, 19, 0.267)
+  );
+  z-index: -1;
+}
+
+/* Header Styles */
+.first-page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  z-index: 10;
+}
+
+.logo-image {
+  height: 35px;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.join-button {
+  background: transparent;
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1.5px solid white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.join-button:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Styles */
+.content-container {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 4rem;
+}
+
+.left-content, .right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 7.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.left-content .title {
+  align-self: flex-start;
+  margin-left: 15%;
+  margin-bottom: 30%;
+  margin-top: -5%;
+}
+
+.right-content .title {
+  align-self: flex-end;
+  margin-right: 15%;
+  text-align: right;
+  margin-top: 15%;
+  margin-bottom: 0;
+}
+
+.side-date {
+  position: absolute;
+  left: 2rem;
+  bottom: 4rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.connect-text {
+  position: relative;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-right: 15%;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (min-width: 1440px) {
+  .title {
+    font-size: 8.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .first-page-header {
+    padding: 1rem 2rem;
+  }
+
+  .content-container {
+    padding: 0 2rem;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .left-content .title,
+  .right-content .title {
+    align-self: center;
+    margin: 0;
+  }
+
+  .nav-menu ul {
+    gap: 1.5rem;
+  }
+
+  .right-content {
+    align-items: center;
+  }
+
+  .connect-text {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .join-button {
+    padding: 0.5rem 1.8rem;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+  }
+}
+

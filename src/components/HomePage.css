@@ -1,0 +1,325 @@
+/* HomePage.css */
+.home-page {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.hero-section {
+    position: relative;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../Assets/home.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    /* Add max-width and margin to make photo narrower */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -50px; 
+    border-radius: 20px;
+    
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin-top: -50px; 
+}
+
+.search-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -60px;
+    z-index: 10;
+    
+    
+}
+
+.search-filters {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background: #E14817;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.search-select,
+.search-input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    transition: box-shadow 0.2s ease;
+}
+
+.search-select:hover,
+.search-input:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-select:focus,
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* DatePicker Styles */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+}
+
+.react-datepicker {
+    font-family: inherit;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.react-datepicker__header {
+    background-color: #E14817;
+    border-bottom: none;
+    padding-top: 10px;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: white;
+}
+
+.react-datepicker__day--selected {
+    background-color: #E14817;
+    border-radius: 50%;
+}
+
+.react-datepicker__day--selected:hover {
+    background-color: #c13d14;
+}
+
+.react-datepicker__day:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: rgba(225, 72, 23, 0.5);
+    border-radius: 50%;
+}
+
+/* Events Section */
+.events-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+    
+}
+
+.events-header {
+    margin-bottom: 200px;
+}
+
+.events-header h2 {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    padding-right: 900px;
+    position: relative;
+    top: 120px;
+  
+  
+  
+    
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Loading and No Events States */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-events {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    color: #666;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E14817;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c13d14;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.events-grid {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Focus States for Accessibility */
+.search-select:focus,
+.search-input:focus {
+    outline: 2px solid #E14817;
+    outline-offset: -2px;
+}
+
+/* Placeholder Styles */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+::-ms-input-placeholder {
+    color: #999;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .search-filters {
+        padding: 20px;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 90vh;
+        padding-bottom: 170px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .search-container {
+        bottom: -120px;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .events-section {
+        padding-top: 150px;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 95vh;
+        padding-bottom: 140px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        bottom: -90px;
+    }
+
+    .search-filters {
+        padding: 15px;
+    }
+
+    .filter-group label {
+        font-size: 0.85rem;
+    }
+
+    .search-select,
+    .search-input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .events-section {
+        padding-top: 120px;
+    }
+}
